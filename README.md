@@ -1,4 +1,22 @@
-# Polyscope's documentation is hosted at [polyscope.run](http://polyscope.run)
+# Finegrained version of fast icosphere.
+
+I saw [fast icosphere](https://observablehq.com/@mourner/fast-icosphere-mesh) from @mourner and saw an opportunity to control it a bit differently, and a great opportunity to play with polyscope. 
+
+First get submodules:
+
+```
+git submodule update --init --recursive
+```
+
+Go to `examples/fast-icosphere` and do the following:
+
+```
+cmake ..
+make
+./bin/polyscopefastico
+```
+
+# (Original readme at ceation of fork) Polyscope's documentation is hosted at [polyscope.run](http://polyscope.run)
 
 ![Polyscope](http://polyscope.run/media/teaser.svg)
 
