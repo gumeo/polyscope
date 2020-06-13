@@ -18,7 +18,6 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 #ifndef FAST_ICOSPHERE_H_
 #define FAST_ICOSPHERE_H_
 
-
 #include <algorithm>
 #include <cmath>
 #include <map>

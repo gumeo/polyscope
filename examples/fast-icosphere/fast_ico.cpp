@@ -5,6 +5,7 @@
 
 #include "polyscope/surface_mesh.h"
 
+#include <chrono>
 #include <iostream>
 #include <map>
 #include <unordered_set>
@@ -34,7 +35,11 @@ void callback() {
   ImGui::InputInt("Num points on original icosahedron edge", &numSplits);
   ImGui::InputInt("Project to sphere (>0) or just supdivide", &project);
   if (ImGui::Button("run subroutine")) {
+    auto start = std::chrono::high_resolution_clock::now();
     GenerateGeometry(numSplits, project);
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    std::cout << "Time of geometry with num splits: " << numSplits << " in ms: " << duration.count() << "ms\n";
   }
 
   ImGui::PopItemWidth();
